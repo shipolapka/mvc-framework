@@ -14,7 +14,6 @@ class Router
         {
             $this->add($key, $val);
         }
-        //debug($arr);
     }
 
     public function add($route, $params)
@@ -46,7 +45,7 @@ class Router
             {
                 $action = $this->params['action'].'Action';
                 if(method_exists($path, $action)) {
-                    $controller = new $path;
+                    $controller = new $path($this->params);
                     $controller->$action();
                 } else {
                     echo 'Action не найден: ' . $action;

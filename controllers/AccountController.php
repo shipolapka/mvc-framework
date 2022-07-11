@@ -2,7 +2,9 @@
 
 namespace controllers;
 
-class AccountController
+use core\Controller;
+
+class AccountController extends Controller
 {
     public function loginAction()
     {
