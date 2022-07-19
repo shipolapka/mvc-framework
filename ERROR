@@ -1,0 +1,2 @@
+
+Fatal error: Uncaught Error: Call to a member function fetchColumn() on bool in C:\OpenServer\domains\mvc-framework\lib\Db.php:32 Stack trace: #0 C:\OpenServer\domains\mvc-framework\controllers\MainController.php(15): lib\Db->column() #1 C:\OpenServer\domains\mvc-framework\core\Router.php(51): controllers\MainController->indexAction() #2 C:\OpenServer\domains\mvc-framework\index.php(17): core\Router->run() #3 {main} thrown in C:\OpenServer\domains\mvc-framework\lib\Db.php on line 32
