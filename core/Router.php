@@ -2,6 +2,8 @@
 
 namespace core;
 
+use core\View;
+
 class Router
 {
     protected $routes = [];
@@ -48,15 +50,15 @@ class Router
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'Action не найден: ' . $action;
+                    View::errorCode(404);
                 }
             } else {
-                echo 'Не найден контроллер: ' . $path;
+                View::errorCode(404);
             }
             //echo '<p>controller: <b>' . $this->params['controller'] . '</b></p>';
             //echo '<p>action: <b>' . $this->params['action'] . '</b></p>';
         } else {
-            echo 'Маршрута нет';
+            View::errorCode(403);
         }
         //echo "start";
     }
