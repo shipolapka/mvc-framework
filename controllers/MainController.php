@@ -9,16 +9,21 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-
         $db = new Db;
 
-        $data = $db->column('SELECT name FROM user WHERE id=1');
-        debug($data);
-//        $vars = [
-//            'name' => 'Остя',
-//            'age' => 30,
-//        ];
-        $this->view->render('Главная страница');
+        $form = '2; DELETE FROM mvc.users';
+
+        $params = [
+            'id' => $form,
+        ];
+
+        $data = $db->column('SELECT name FROM mvc.users WHERE id = :id', $params);
+
+        $result = $this->model->getNews();
+        $vars = [
+            'news' => $result
+        ];
+        $this->view->render('Главная страница', $vars);
     }
 
 }
