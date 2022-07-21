@@ -1,5 +1,5 @@
 <h3>Вход</h3>
-<form action="/login.php" method="post">
+<form action="login" method="post">
     <p>Логин</p>
     <p><input type="text" name="login"></p>
     <p>Пароль</p>
