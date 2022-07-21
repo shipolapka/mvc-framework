@@ -1,8 +1,8 @@
 <h3>Вход</h3>
-<form>
+<form action="/login.php" method="post">
     <p>Логин</p>
-    <p><input type="text"></p>
+    <p><input type="text" name="login"></p>
     <p>Пароль</p>
-    <p><input type="text"></p>
-    <b><button>Регистрация</button></b>
+    <p><input type="password" name="password"></p>
+    <b><button type="submit" name="enter">Вход</button></b>
 </form>
